@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Demo.cs" />
      <Compile Include="Assets\Scripts\LogFileName.cs" />
+     <Compile Include="Assets\Scripts\Singleton\Singleton.cs" />
+     <Compile Include="Assets\Scripts\Singleton\XXManager.cs" />
  <Reference Include="UnityEngine.CoreModule">
  <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
  </Reference>
