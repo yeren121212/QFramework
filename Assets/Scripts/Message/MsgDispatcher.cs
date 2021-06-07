@@ -2,6 +2,11 @@
 // C# this扩展 需要静态类
 // 教程地址:http://liangxiegame.com/post/5/
 
+using UnityEngine;
+using QFramework;
+using System;
+using System.Collections.Generic;
+
 public static class MsgDispatcher
 {
     private class LogicMsgHandler
@@ -9,10 +14,10 @@ public static class MsgDispatcher
         public readonly IMsgReceiver receiver;
         public readonly Action<object[]> callback;
 
-        public LogicMsgHandler(ImsgReceiver receiver, Action<object[]> callback)
+        public LogicMsgHandler(IMsgReceiver receiver, Action<object[]> callback)
         {
-            receiver = receiver;
-            callback = callback;
+            this.receiver = receiver;
+            this.callback = callback;
         }
     }
 
@@ -47,7 +52,7 @@ public static class MsgDispatcher
     }
 
     // 发送消息
-    public static void SendLoginMsg(this IMsgSender sender, string msgName, params object[] paramList)
+    public static void SendLogicMsg(this IMsgSender sender, string msgName, params object[] paramList)
     {
         if(string.IsNullOrEmpty(msgName)){
             Debug.LogError("SendMsg is Null or Empty");

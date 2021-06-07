@@ -1,6 +1,6 @@
 // 消息派发接口
 
-namespace IMsgSender
+namespace QFramework
 {
     public interface IMsgSender {}
 }
